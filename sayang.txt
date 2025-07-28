@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Sayang 💌</title>
+  <style>
+    body {
+      margin:0; padding:0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      text-align: center;
+    }
+    .section {
+      height:100vh; display:flex;
+      align-items:center; justify-content:center;
+      flex-direction: column;
+      transition: opacity 1s;
+    }
+    #intro { background: #fff; }
+    #content, #final { opacity:0; visibility:hidden; }
+    button {
+      padding: 15px 30px;
+      border:none; background:#ff8da1; color:#fff;
+      font-size:1.2rem; border-radius:8px;
+      cursor:pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    button:hover { background:#ff7390; }
+    .letter {
+      max-width: 80%; margin: auto;
+      font-size:1.1rem; line-height:1.6;
+      padding: 0 20px;
+    }
+    h1 { font-size:2rem; color:#d4597e; }
+  </style>
+</head>
+<body>
+
+  <!-- Intro Splash -->
+  <div id="intro" class="section">
+    <h1>Hey Sayang 💌</h1>
+    <p>Take a deep breath… <br>Click to enter your little surprise 🥺</p>
+    <button id="enterBtn">Click to Enter</button>
+  </div>
+
+  <!-- Letter Section -->
+  <div id="content" class="section">
+    <div class="letter">
+      <p>Even though I can’t be by your side physically today, please know my heart is always right there with you.</p>
+      <p>You’ve been my strength, my comfort, my biggest support. If I could, I’d be handing you flowers and this card in person—just to see your beautiful smile.</p>
+      <p>For now, my love lives in this message. Rindu tak pernah kurang, and loving you makes every day brighter.</p>
+      <p>Thank you for staying strong, for being patient, for being you. One day we’ll read this together, side by side—no more distance.</p>
+      <p><strong>I love you, always. With all my heart.</strong></p>
+      <p style="margin-top:30px;">— Your clingy and forever sayang 💖</p>
+      <button id="nextBtn">Continue</button>
+    </div>
+  </div>
+
+  <!-- Final Screen -->
+  <div id="final" class="section">
+    <h1>💐 HAPPY NATIONAL GIRLFRIEND DAY SAYANGGG 💐</h1>
+  </div>
+
+<script>
+  document.getElementById('enterBtn').onclick = function() {
+    document.getElementById('intro').style.opacity = 0;
+    setTimeout(function(){
+      document.getElementById('intro').style.display = 'none';
+      document.getElementById('content').style.visibility = 'visible';
+      document.getElementById('content').style.opacity = 1;
+    }, 1000);
+  };
+  document.getElementById('nextBtn').onclick = function() {
+    document.getElementById('content').style.opacity = 0;
+    setTimeout(function(){
+      document.getElementById('content').style.display = 'none';
+      document.getElementById('final').style.visibility = 'visible';
+      document.getElementById('final').style.opacity = 1;
+    }, 1000);
+  };
+</script>
+
+</body>
+</html>
